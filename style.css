@@ -1,0 +1,327 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 200px;
+}
+/* ---------------------- HEADER  */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  font-size: 14px;
+}
+header .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 5% 10px 5%;
+}
+.logo {
+  height: 40px;
+}
+.logo img {
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header nav ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  padding: 0px 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: teal;
+}
+
+header button {
+  width: 130px;
+  height: 40px;
+  border: 2px solid teal;
+  border-radius: 7px;
+  background-color: transparent;
+}
+
+header button a {
+  text-decoration: none;
+  color: teal;
+}
+
+/* ---------------------- MAIN  */
+main {
+  max-height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y;
+}
+/* ---------------------- SECTION  */
+#Home {
+  background-color: aquamarine;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-image: url("./img/STABILA_1.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#Marque {
+  scroll-margin-top: 70px;
+  height: 60vh;
+  scroll-snap-align: center;
+}
+#Product_details {
+  scroll-margin-top: 70px;
+  scroll-snap-align: center;
+  background-image: url("./img/STABILA_1.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 30vh;
+}
+#Historique {
+  scroll-margin-top: 70px;
+  scroll-snap-align: center;
+  background-image: url("./img/METABO_1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#Contact {
+  background-color: teal;
+  height: 50vh;
+  scroll-snap-align: center;
+}
+#Slogon {
+  scroll-margin-top: 70px;
+  scroll-snap-align: center;
+  background-image: url("./img/STIHL_1.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.blanc {
+  background-color: white;
+  width: 100%;
+  height: 25vh;
+}
+/* ---------------------- OVERLAY  */
+.overlay {
+  height: 100%;
+  width: 100%;
+}
+
+#Home .overlay {
+  background-color: #000000b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Product_details .overlay {
+  background-color: #000000c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  padding: 20px;
+}
+
+#Historique .overlay {
+  background-color: #000000ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Slogon .overlay {
+  background-color: #000000ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---------------------- MARQUE  */
+.product_container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 230px);
+}
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product img {
+  width: 100%;
+}
+/* ---------------------- PRODUCT DETAILS */
+
+.details {
+  display: none;
+}
+
+.view_details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.details_grid {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-template-rows: 30px auto auto auto 10px;
+  grid-template-areas:
+    "banner ."
+    "banner description_container"
+    "banner voirplus_btn"
+    "banner product_variants"
+    "banner .";
+  column-gap: 40px;
+  row-gap: 20px;
+  width: 80%;
+  padding: 5%;
+}
+.banner {
+  grid-area: banner;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./img/METABO_1.jpg");
+}
+.banner_overlay {
+  grid-area: banner_overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #bebebe6b;
+}
+.banner_overlay img {
+  width: 100%;
+}
+.description_container {
+  grid-area: description_container;
+  padding-right: 5%;
+}
+.voirplus_btn {
+  grid-area: voirplus_btn;
+  width: 130px;
+  height: 40px;
+  border: 2px solid teal;
+  border-radius: 7px;
+  background-color: transparent;
+}
+.voirplus_btn a {
+  text-decoration: none;
+  color: teal;
+}
+
+.product_variants {
+  grid-area: product_variants;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5%;
+}
+.product_variants li {
+  grid-area: product_variants;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 90px;
+}
+.product_variants li img {
+  height: 100%;
+}
+.titre {
+  font-size: 2.2rem;
+  color: #36554b;
+}
+.sous_titre {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #2c2c2c;
+}
+.description {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+/* ---------------------- HISTORIQUE  */
+#Historique .overlay {
+  padding: 40px 20% 40px 20%;
+  gap: 30px;
+}
+
+#Historique .overlay article {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.8rem;
+  padding: 0 20px;
+}
+#Historique .overlay cite {
+  color: white;
+  align-self: start;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: -20px;
+  font-style: normal;
+}
+#Historique .overlay hr {
+  width: 100%;
+  border: none;
+  height: 2px;
+  align-self: start;
+  background-color: white;
+}
+
+/* ---------------------- SLOGON  */
+#Slogon .overlay {
+  padding: 40px 20% 40px 20%;
+  gap: 30px;
+}
+#Slogon .overlay h5 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 1.8rem;
+  font-style: italic;
+  padding: 0 20px;
+}
+
+#Slogon .overlay hr {
+  width: 100%;
+  border: none;
+  height: 2px;
+  align-self: start;
+  background-color: white;
+}
+/* ---------------------- CONTACT  */

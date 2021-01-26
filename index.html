@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>HEP Dz 1.1</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="overlay">
+          <div class="logo">
+            <img src="./img/LOGO.png" alt="Logo" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#Marque">Marque</a></li>
+              <li><a href="#Historique">Historique</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="boutique"><a href="#">Boutique</a></button>
+        </div>
+      </header>
+      <section id="Home" class="Home">
+        <div class="overlay"></div>
+      </section>
+      <section id="Marque" class="Marque">
+        <div class="overlay">
+          <div id="Product_container" class="product_container">
+            <div onclick="view_STABILA()" id="STABILA" class="product">
+              <img src="./img/STABILA.png" alt="STABILA" />
+            </div>
+            <div onclick="view_METABO()" id="METABO" class="product">
+              <img src="./img/METABO.jpg" alt="METABO" />
+            </div>
+            <div onclick="view_STIHL()" id="STIHL" class="product">
+              <img src="./img/STIHL.png" alt="STIHL" />
+            </div>
+            <div onclick="view_HADEF()" id="HADEF" class="product">
+              <img src="./img/HADEF.png" alt="HADEF" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Product_details" class="Product_details">
+        <div class="overlay">
+          <div id="STABILA_details" class="details">
+            <div class="details_grid">
+              <div class="banner">
+                <div class="banner_overlay">
+                  <img src="./img/STABILA.png" alt="STABILA" />
+                </div>
+              </div>
+              <article class="description_container">
+                <h2 class="titre">STABILA</h2>
+                <h3 class="sous_titre">
+                  STABILA est un fabricant majeur et réputé d’outils de mesure
+                  de marque de la meilleure qualité existant depuis 1865
+                </h3>
+                <p class="description">
+                  la marque STABILA est N°1 de nombreux marchés dans des
+                  domaines majeurs des techniques de mesure grâce a leur
+                  technique moderne de fabrication.
+                </p>
+              </article>
+              <button class="voirplus_btn"><a href="#">Boutique</a></button>
+              <ul class="product_variants">
+                <li><img src="./img/STABILA_p1.jpeg" alt="product" /></li>
+                <li><img src="./img/STABILA_p2.jpeg" alt="product" /></li>
+                <li><img src="./img/STABILA_p3.jpeg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div id="METABO_details" class="details">
+            <div class="details_grid">
+              <div class="banner">
+                <div class="banner_overlay">
+                  <img src="./img/METABO.jpg" alt="METABO" />
+                </div>
+              </div>
+              <article class="description_container">
+                <h2 class="titre">METABO</h2>
+                <h3 class="sous_titre">
+                  Metabo et l’un des leaders mondiaux de fabrication
+                  d’outillages électroportatifs depuis 1923.
+                </h3>
+                <p class="description">
+                  La société propose aux professionnels du monde entier des
+                  solutions complètes et performantes pour les métiers de la
+                  construction et de la rénovation et des métiers du métal et
+                  pour la métallurgie.
+                </p>
+              </article>
+              <button class="voirplus_btn"><a href="#">Boutique</a></button>
+              <ul class="product_variants">
+                <li><img src="./img/METABO_p1.jpeg" alt="product" /></li>
+                <li><img src="./img/METABO_p2.jpeg" alt="product" /></li>
+                <li><img src="./img/METABO_p3.jpeg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div id="STIHL_details" class="details">
+            <div class="details_grid">
+              <div class="banner">
+                <div class="banner_overlay">
+                  <img src="./img/STIHL.png" alt="STIHL" />
+                </div>
+              </div>
+              <article class="description_container">
+                <h2 class="titre">STIHL</h2>
+                <h3 class="sous_titre">
+                  STIHL est la marque de scies à chaîne la plus vendue au monde
+                  depuis 1971. Leurs innovations remarquables ont toujours été
+                  une référence dans le secteur. 
+                </h3>
+                <p class="description">
+                  Depuis sa fondation, il y a plus de 90 ans, elle est devenue
+                  un fabricant mondial de tronçonneuse et de matériel
+                  d'alimentation d'extérieur dans plusieurs domaines (jardinage,
+                  construction, foret)
+                </p>
+              </article>
+              <button class="voirplus_btn"><a href="#">Boutique</a></button>
+              <ul class="product_variants">
+                <li><img src="./img/STIHL_p1.jpeg" alt="product" /></li>
+                <li><img src="./img/STIHL_p2.jpeg" alt="product" /></li>
+                <li><img src="./img/STIHL_p3.jpeg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div id="HADEF_details" class="details">
+            <div class="details_grid">
+              <div class="banner">
+                <div class="banner_overlay">
+                  <img src="/img/HADEF.png" alt="HADEF" />
+                </div>
+              </div>
+              <article class="description_container">
+                <h2 class="titre">HADEF</h2>
+                <h3 class="sous_titre">Existant depuis 110 ans.</h3>
+                <p class="description">
+                  Les produits HADEF jouissent d’une renommée internationale
+                  dans la fabrication des appareils de levage et de
+                  manutention (palans de treuils et de chariots).
+                </p>
+              </article>
+              <button class="voirplus_btn"><a href="#">Boutique</a></button>
+              <ul class="product_variants">
+                <li><img src="./img/HADEF_p1.jpeg" alt="product" /></li>
+                <li><img src="./img/HADEF_p2.jpeg" alt="product" /></li>
+                <li><img src="./img/HADEF_p3.jpeg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blanc"></section>
+      <section>
+        <section id="Slogon" class="slogon">
+          <div class="overlay">
+            <hr />
+
+            <h5>
+              &emsp;&ensp;« Par ce que la confiance ne s’accorde qu’aux professionnels, nous
+              vous proposons des produits de haute qualité afin de vous garantir
+              une sécurité et facilité de travaille. »
+            </h5>
+            <hr />
+          </div>
+        </section>
+      </section>
+      <section class="blanc"></section>
+      <section id="Historique" class="Historique">
+        <div class="overlay">
+          <hr />
+          <article>
+            &emsp;&ensp;« Inspirée d'un héritage familial, Haddad Équipement professionnel
+            verra officiellement le jour en Mars 2000. L’entreprise héritera de
+            2 partenaires leaders dans leur domaine dans le marché de
+            l’outillage Professionnel ALLEMAND ;METABOet STIHLdont nous tenons
+            l’exclusivité sur tout le marché algérien. : Bien que nous avions un
+            positionnement haut de gamme sur le marché de l’outillage, Nous ne
+            nous sommes pasarrêtéslà, nous avons eu l’exclusivité de deux autres
+            marques leader Allemande ; STABILA etHADEF; Depuis l’entreprise n'a
+            cessé de se développer. Nous travaillons de façons à procurer aux
+            professionnels comme au particuliers des produits de hautes gammes
+            afin qu’ils puissent travaillez confortablement en toute sécurité en
+            leurs garantissant un suivi et un service après-vente à leur
+            disposition avec des pièces de rechanges d’origine. »
+          </article>
+          <hr />
+          <cite>Haddad Rabah</cite>
+        </div>
+      </section>
+      <footer id="Contact" class="Contact">
+        <div class="overlay">
+          <ul>
+            <li>
+              <a href="#">
+                <b> Addresse:</b> Cité Brancy 21, Gpr Propriété 228 N 02 Local
+                03 Rouiba – Alger
+              </a>
+            </li>
+            <li><b>Email:</b>contact@hep-dz.com</li>
+            <li><b>Mobile:</b> 0554 512 321</li>
+          </ul>
+          <div>Copyright © 2020 – HEP. Tous droit réservés .</div>
+        </div>
+      </footer>
+    </main>
+    <script src="thescript.js"></script>
+  </body>
+</html>
