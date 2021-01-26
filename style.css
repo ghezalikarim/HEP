@@ -65,13 +65,13 @@ header button a {
 main {
   max-height: 100vh;
   overflow: auto;
-  //scroll-snap-type: y;
+  /*scroll-snap-type: y; */
 }
 /* ---------------------- SECTION  */
 #Home {
   background-color: aquamarine;
   height: 100vh;
-  scroll-snap-align: start;
+ /* scroll-snap-align: start;*/
   background-image: url("./img/STABILA_1.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -80,11 +80,11 @@ main {
 #Marque {
   scroll-margin-top: 70px;
   height: 60vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 #Product_details {
   scroll-margin-top: 70px;
-  scroll-snap-align: center;
+ /* scroll-snap-align: center; */
   background-image: url("./img/STABILA_1.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -93,7 +93,7 @@ main {
 }
 #Historique {
   scroll-margin-top: 70px;
-  scroll-snap-align: center;
+/*  scroll-snap-align: center; */
   background-image: url("./img/METABO_1.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -102,11 +102,11 @@ main {
 #Contact {
   background-color: teal;
   height: 50vh;
-  scroll-snap-align: center;
+ /* scroll-snap-align: center; */
 }
 #Slogon {
   scroll-margin-top: 70px;
-  scroll-snap-align: center;
+ /* scroll-snap-align: center; */
   background-image: url("./img/STIHL_1.jpeg");
   background-attachment: fixed;
   background-position: center;
