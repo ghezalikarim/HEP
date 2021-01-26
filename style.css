@@ -65,7 +65,7 @@ header button a {
 main {
   max-height: 100vh;
   overflow: auto;
-  scroll-snap-type: y;
+  /* scroll-snap-type: y; */
 }
 /* ---------------------- SECTION  */
 #Home {
@@ -84,7 +84,7 @@ main {
 }
 #Product_details {
   scroll-margin-top: 70px;
- scroll-snap-align: center;
+/* scroll-snap-align: center; */
   background-image: url("./img/STABILA_1.jpeg");
   background-attachment: fixed;
   background-position: center;
