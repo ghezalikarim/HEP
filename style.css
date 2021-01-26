@@ -65,7 +65,7 @@ header button a {
 main {
   max-height: 100vh;
   overflow: auto;
-  scroll-snap-type: y;
+  //scroll-snap-type: y;
 }
 /* ---------------------- SECTION  */
 #Home {
