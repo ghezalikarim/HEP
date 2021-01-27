@@ -62,16 +62,11 @@ header button a {
 }
 
 /* ---------------------- MAIN  */
-main {
-  max-height: 100vh;
-  overflow: auto;
-  /* scroll-snap-type: y; */
-}
+
 /* ---------------------- SECTION  */
 #Home {
   background-color: aquamarine;
   height: 100vh;
- /* scroll-snap-align: start;*/
   background-image: url("./img/STABILA_1.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -80,11 +75,9 @@ main {
 #Marque {
   scroll-margin-top: 70px;
   height: 60vh;
-  /* scroll-snap-align: center; */
 }
 #Product_details {
   scroll-margin-top: 70px;
-/* scroll-snap-align: center; */
   background-image: url("./img/STABILA_1.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -93,7 +86,7 @@ main {
 }
 #Historique {
   scroll-margin-top: 70px;
-/*  scroll-snap-align: center; */
+  scroll-snap-align: center;
   background-image: url("./img/METABO_1.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -102,11 +95,9 @@ main {
 #Contact {
   background-color: teal;
   height: 50vh;
- /* scroll-snap-align: center; */
 }
 #Slogon {
   scroll-margin-top: 70px;
- /* scroll-snap-align: center; */
   background-image: url("./img/STIHL_1.jpeg");
   background-attachment: fixed;
   background-position: center;
@@ -124,22 +115,23 @@ main {
 }
 
 #Home .overlay {
-  background-color: #000000b4;
+  background-color: #000000c9;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
+
 #Product_details .overlay {
   background-color: #000000c9;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 30vh;
-  padding: 20px;
+  padding: 30px;
 }
 
 #Historique .overlay {
-  background-color: #000000ce;
+  background-color: #000000c9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,13 +139,44 @@ main {
 }
 
 #Slogon .overlay {
-  background-color: #000000ce;
+  background-color: #000000c9;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-/* ---------------------- MARQUE  */
+/* ---------------------- HOME */
+
+#Home .overlay .titre_container {
+  margin-top: 5%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+}
+#Home .overlay .titre_site h1 {
+  font-size: 7rem;
+  letter-spacing: 10px;
+}
+#Home .overlay hr {
+  color: white;
+  border: none;
+  background-color: white;
+  height: 15px;
+  margin-top: -10px;
+}
+#Home .overlay .citation {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+#Home .overlay .sous_titre_site {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+/* ---------------------- MARQUE */
 .product_container {
   display: grid;
   align-items: center;
@@ -215,7 +238,6 @@ main {
   background-image: url("./img/METABO_1.jpg");
 }
 .banner_overlay {
-  grid-area: banner_overlay;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,24 +298,26 @@ main {
 }
 /* ---------------------- HISTORIQUE  */
 #Historique .overlay {
-  padding: 40px 20% 40px 20%;
+  padding: 40px 25% 40px 25%;
   gap: 30px;
 }
 
 #Historique .overlay article {
-  font-size: 1.1rem;
-  font-weight: 500;
   color: white;
+  font-size: 1rem;
+  font-weight: lighter;
   line-height: 1.8rem;
-  padding: 0 20px;
+  padding: 0 30px;
+  text-align: center;
 }
 #Historique .overlay cite {
   color: white;
   align-self: start;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   margin-top: -20px;
   font-style: normal;
+  margin-left: 30px;
 }
 #Historique .overlay hr {
   width: 100%;
@@ -305,23 +329,73 @@ main {
 
 /* ---------------------- SLOGON  */
 #Slogon .overlay {
+  text-align: center;
   padding: 40px 20% 40px 20%;
   gap: 30px;
 }
 #Slogon .overlay h5 {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: lighter;
   line-height: 1.8rem;
   font-style: italic;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
-#Slogon .overlay hr {
-  width: 100%;
-  border: none;
-  height: 2px;
-  align-self: start;
-  background-color: white;
-}
 /* ---------------------- CONTACT  */
+
+/* ---------------------- RESPONSIVE  */
+@media screen and (max-width: 800px) {
+  /* ---------------------- MARQUE */
+  #Marque {
+    height: 80vh;
+  }
+
+  /* ---------------------- PRODUCT DETAILS */
+  .details_grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "banner"
+      "description_container"
+      "product_variants"
+      "voirplus_btn";
+    column-gap: 40px;
+    width: 100%;
+    padding: 10%;
+  }
+  .banner {
+    height: 100px;
+    width: 100%;
+  }
+  .banner_overlay img {
+    margin-bottom: -100px;
+  }
+  .description_container {
+    padding-right: 0;
+    margin-top: 50px;
+  }
+  .voirplus_btn {
+    width: 100%;
+  }
+  .product_variants li {
+    height: 60px;
+  }
+  /* ---------------------- SLOGON  */
+  #Slogon .overlay {
+    padding: 40px 0 40px 0;
+  }
+  /* ---------------------- HISTORIQUE  */
+  #Historique .overlay {
+    padding: 40px 0 40px 0;
+    gap: 30px;
+  }
+  #Historique .overlay hr {
+    width: 80%;
+    border: none;
+    height: 2px;
+    align-self: start;
+    margin-left: 30px;
+  }
+}
+/* ----------------------  */
