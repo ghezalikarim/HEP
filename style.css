@@ -8,6 +8,13 @@
 img {
   max-width: 200px;
 }
+
+/* ---------------------- BODY  */
+body {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  max-height: 100vh;
+}
 /* ---------------------- HEADER  */
 header {
   position: fixed;
@@ -20,7 +27,7 @@ header .overlay {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 10px 5% 10px 5%;
+  padding: 15px 5% 15px 5%;
 }
 .logo {
   height: 40px;
@@ -55,12 +62,17 @@ header button {
   border-radius: 7px;
   background-color: transparent;
 }
-
 header button a {
   text-decoration: none;
   color: teal;
 }
+header button:hover {
+  background-color: teal;
+}
 
+header button:hover a {
+  color: white;
+}
 /* ---------------------- MAIN  */
 
 /* ---------------------- SECTION  */
@@ -86,15 +98,13 @@ header button a {
 }
 #Historique {
   scroll-margin-top: 70px;
-  scroll-snap-align: center;
   background-image: url("./img/METABO_1.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 #Contact {
-  background-color: teal;
-  height: 50vh;
+  background-color: #001c1d;
 }
 #Slogon {
   scroll-margin-top: 70px;
@@ -190,6 +200,7 @@ header button a {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .product img {
   width: 100%;
@@ -265,7 +276,12 @@ header button a {
   text-decoration: none;
   color: teal;
 }
-
+.voirplus_btn:hover {
+  background-color: teal;
+}
+.voirplus_btn:hover a {
+  color: white;
+}
 .product_variants {
   grid-area: product_variants;
   display: flex;
@@ -308,7 +324,6 @@ header button a {
   font-weight: lighter;
   line-height: 1.8rem;
   padding: 0 30px;
-  text-align: center;
 }
 #Historique .overlay cite {
   color: white;
@@ -343,6 +358,77 @@ header button a {
 }
 
 /* ---------------------- CONTACT  */
+#Contact,
+#Contact a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+#Contact .overlay {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "footer_logo iframe iframe"
+    "footer_logo Contact_info menu"
+    "social_media social_media social_media"
+    "Copyrights Copyrights Copyrights";
+  gap: 50px;
+  padding: 100px 10% 50px 10%;
+}
+#Contact .overlay .footer_logo {
+  grid-area: footer_logo;
+}
+#Contact .overlay .footer_logo img {
+  width: 150px;
+}
+#Contact .overlay .footer_logo h6 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+#Contact .overlay .footer_logo p {
+  margin-top: 20px;
+}
+#Contact .overlay .menu {
+  grid-area: menu;
+}
+#Contact .overlay .Contact_info {
+  grid-area: Contact_info;
+}
+#Contact .overlay .Contact_info li {
+  list-style-type: none;
+}
+#Contact .overlay .social_media {
+  grid-area: social_media;
+}
+#Contact .overlay .social_media ul {
+  margin-top: 20px;
+  display: flex;
+  place-content: center;
+  column-gap: 20px;
+}
+#Contact .overlay .social_media img {
+  max-width: 40px;
+}
+#Contact .overlay .social_media hr {
+  border: none;
+  background-color: white;
+  height: 2px;
+}
+#Contact .overlay .social_media ul li {
+  list-style-type: none;
+}
+#Contact .overlay .Copyrights {
+  grid-area: Copyrights;
+  text-align: center;
+  margin-top: -40px;
+}
+#Contact .overlay iframe {
+  grid-area: iframe;
+  border-radius: 7px;
+}
 
 /* ---------------------- RESPONSIVE  */
 @media screen and (max-width: 800px) {
@@ -396,6 +482,31 @@ header button a {
     height: 2px;
     align-self: start;
     margin-left: 30px;
+  }
+  header nav {
+    display: none;
+  }
+  /* ---------------------- CONTACT  */
+
+  #Contact .overlay {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "footer_logo"
+      "iframe"
+      "Contact_info"
+      "menu"
+      "social_media"
+      "Copyrights";
+    gap: 30px;
+  }
+  #Contact .overlay iframe {
+    margin-top: 0px;
+  }
+  #Contact .overlay .Contact_info {
+    margin-top: 30px;
   }
 }
 /* ----------------------  */
