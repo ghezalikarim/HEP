@@ -508,5 +508,8 @@ header button:hover a {
   #Contact .overlay .Contact_info {
     margin-top: 30px;
   }
+  #Contact .overlay .Copyrights {
+    margin-top: -20px;
+  }
 }
 /* ----------------------  */
