@@ -1,212 +1,174 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  scroll-behavior: smooth;
-}
-img {
-  max-width: 200px;
+/*
+#0D0D0D
+#F2F2F2
+#A6A6A6
+#CCD9D7
+#618C88
+#252525
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,800;1,700&display=swap");
+:root {
+  /* -------- Colors ------- */
+
+  --Color-Primary: #618c88;
+  --Color-Highight: #f2f2f2;
+  --Color-dark: #0d0d0d;
+  --Color-Background: #f2f2f2;
+  --Color-Container: #ffffff;
+  --Color-Dark-Overlay: #000000b3;
+  --Color-Light-Overlay: #ffffff70;
+  --Color-Text-Title: #618c88;
+  --Color-Text-Sub_Title: #252525;
+  --Color-Text-Text: #383838;
+  --Color-Links: #618c88;
+  --Color-Links-hover: #252525;
+
+  /* -------- Fonts -------- */
+
+  --Font: "Raleway", sans-serif;
+  --Font-size-Text-Title: 2.5rem;
+  --Font-size-Text-Sub_Title: 1.2rem;
+  --Font-size-Text-Text: 0.9rem;
+  --Font-weight-Light: 400;
+  --Font-weight-Bold: 800;
+
+  /* -------- Shadow -------- */
+
+  --Shadow: 0px 1px 5px #00000027;
+
+  /* -------- Button -------- */
+
+  --Color-Button: #618c88;
+  --Color-Button-Text: #f2f2f2;
+  --Color-Button-hover: transparent;
 }
 
-/* ---------------------- BODY  */
-body {
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-  max-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--Font);
 }
-/* ---------------------- HEADER  */
+
+li {
+  list-style-type: none;
+}
+
+/* ---------------------- Header */
 header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  font-size: 14px;
-  z-index: 5;
-}
-header .overlay {
+  background-color: var(--Color-Highight);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  padding: 15px 5% 15px 5%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 15px 3%;
+
+  z-index: 5;
 }
 .logo {
   height: 40px;
 }
-.logo img {
-  height: 100%;
+header nav {
+  display: grid;
+  place-content: center;
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
 }
-
-header nav ul li {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-  padding: 0px 10px;
+.nav_links {
+  display: grid;
+  place-content: center;
+  margin: 0 10px;
 }
-
 header nav ul li a {
   text-decoration: none;
-  color: teal;
+  color: var(--Color-Links);
+  font-weight: var(--Font-weight-Bold);
 }
-
-header button {
-  width: 130px;
-  height: 40px;
-  border: 2px solid teal;
-  border-radius: 7px;
-  background-color: transparent;
-}
-header button a {
+header nav ul li a:hover {
   text-decoration: none;
-  color: teal;
-}
-header button:hover {
-  background-color: teal;
+  color: var(--Color-Links-hover);
+  text-decoration: underline 3px var(--Color-Links);
 }
 
-header button:hover a {
-  color: white;
+.boutique {
+  border: solid 3px var(--Color-Primary);
+  color: var(--Color-Primary);
+  padding: 10px 35px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: var(--Font-weight-Bold);
 }
-/* ---------------------- MOBILE NAV  */
-.mobile_topbar {
-  display: none;
-}
-/* ---------------------- MAIN  */
 
-/* ---------------------- SECTION  */
-#Home {
-  background-color: aquamarine;
-  height: 100vh;
-  background-image: url("./img/STABILA_1.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+.boutique:hover {
+  background-color: var(--Color-Primary);
+  color: var(--Color-Highight);
 }
-#Marque {
-  scroll-margin-top: 70px;
-  height: 60vh;
-}
-#Product_details {
-  scroll-margin-top: 70px;
-  background-image: url("./img/STABILA_1.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  min-height: 30vh;
-}
-#Historique {
-  scroll-margin-top: 70px;
-  background-image: url("./img/METABO_1.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-#Contact {
-  background-color: #001c1d;
-}
-#Slogon {
-  scroll-margin-top: 70px;
-  background-image: url("./img/STIHL_1.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-.blanc {
-  background-color: white;
-  width: 100%;
-  height: 25vh;
-}
-/* ---------------------- OVERLAY  */
-.overlay {
+
+header img {
   height: 100%;
-  width: 100%;
 }
+/* ---------------------- Section */
+/* .section {
+  min-height: 100vh;
+} */
 
-#Home .overlay {
-  background-color: #000000b6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-}
-
-#Product_details .overlay {
-  background-color: #000000c9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 30vh;
-  padding: 30px;
-}
-
-#Historique .overlay {
-  background-color: #000000c9;
+/* ---------------------- Accueil */
+#Accueil.section {
   display: grid;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#Slogon .overlay {
-  background-color: #000000c9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* ---------------------- HOME */
-
-#Home .overlay .titre_container {
-  margin-top: 5%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  gap: 10px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("./img/STABILA_cover.jpeg");
   text-align: center;
 }
-#Home .overlay .titre_site h1 {
-  font-size: 7rem;
-  letter-spacing: 10px;
-}
-#Home .overlay hr {
-  color: white;
-  border: none;
-  background-color: white;
-  height: 15px;
-  margin-top: -10px;
-}
-#Home .overlay .citation {
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
-#Home .overlay .sous_titre_site {
-  font-size: 1rem;
-  letter-spacing: 3px;
-  font-weight: lighter;
+
+#Accueil.section .overlay {
+  background-color: var(--Color-Dark-Overlay);
+  display: grid;
+  place-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--Color-Highight);
+  position: absolute;
+  z-index: 3;
 }
 
-#slider {
+#Accueil.section .overlay h1 {
+  margin-top: 70px;
+  font-size: 9rem;
+  text-decoration: 15px underline;
+  letter-spacing: 5px;
+}
+#Accueil.section .overlay h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+/* ------ */
+.slider {
   overflow: hidden;
   height: 100vh;
   position: relative;
 }
-#slider figure {
+.slider figure {
   position: relative;
   width: 500%;
   margin: 0;
   left: 0;
-  animation: slider 20s infinite;
+  animation: slider 30s infinite;
 }
-#slider figure .img {
+.slider figure .slide {
   width: 20%;
   float: left;
   height: 100vh;
@@ -243,517 +205,476 @@ header button:hover a {
     left: -400%;
   }
 }
-.s1 {
-  background-image: url("img/STABILA_1.jpeg");
+.i1 {
+  background-image: url("./img/STABILA_cover.jpeg");
 }
-.s2 {
-  background-image: url("img/METABO_1.jpg");
+.i2 {
+  background-image: url("./img/METABO_cover.jpg");
 }
-.s3 {
-  background-image: url("img/STIHL_1.jpeg");
+.i3 {
+  background-image: url("./img/STIHL_cover.jpeg");
 }
-.s4 {
-  background-image: url("img/HADEF_1.jpeg");
+.i4 {
+  background-image: url("./img/HADEF_cover.jpeg");
 }
-.s5 {
-  background-image: url("img/STABILA_1.jpeg");
+.i5 {
+  background-image: url("./img/STABILA_cover.jpeg");
 }
-/* ---------------------- MARQUE */
-.product_container {
+/* ---------------------- Marque */
+
+#Marque.section {
+  background-color: var(--Color-Highight);
+  display: grid;
+  min-height: 60vh;
+  scroll-margin-top: 140px;
+}
+#Marque.section .overlay {
   display: grid;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, 220px);
+  padding: 50px 20px;
+  grid-gap: 40px;
   height: 100%;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, 230px);
 }
-.product {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.product img {
-  width: 100%;
-}
-/* ---------------------- PRODUCT DETAILS */
 
-.details {
+#Marque img {
+  width: 220px;
+  border-radius: 7px;
+}
+
+#HADEF_details,
+#STABILA_details,
+#METABO_details,
+#STIHL_details {
   display: none;
 }
 
-.view_details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+#HADEF_details:target,
+#STABILA_details:target,
+#METABO_details:target,
+#STIHL_details:target {
+  scroll-margin-top: 100px;
+  display: grid;
+
+  animation: view 500ms;
 }
 
-.details_grid {
-  background-color: white;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: auto auto;
-  grid-template-rows: 30px auto auto auto 10px;
-  grid-template-areas:
-    "banner ."
-    "banner description_container"
-    "banner voirplus_btn"
-    "banner product_variants"
-    "banner .";
-  column-gap: 40px;
-  row-gap: 20px;
-  width: 80%;
-  padding: 5%;
+@keyframes view {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.banner {
-  grid-area: banner;
-  height: 100%;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* ---------------------- Detail */
+
+#Details.section {
+  min-height: 40vh;
+  background-color: var(--Color-Highight);
   background-size: cover;
   background-position: center;
-  background-image: url("./img/METABO_1.jpg");
-}
-.banner_overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  background-color: #bebebe6b;
-}
-.banner_overlay img {
-  width: 100%;
-}
-.description_container {
-  grid-area: description_container;
-  padding-right: 5%;
-}
-.voirplus_btn {
-  grid-area: voirplus_btn;
-  width: 130px;
-  height: 40px;
-  border: 2px solid teal;
-  border-radius: 7px;
-  background-color: transparent;
-}
-.voirplus_btn a {
-  text-decoration: none;
-  color: teal;
-}
-.voirplus_btn:hover {
-  background-color: teal;
-}
-.voirplus_btn:hover a {
-  color: white;
-}
-.product_variants {
-  grid-area: product_variants;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 5%;
-}
-.product_variants li {
-  grid-area: product_variants;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  height: 90px;
-}
-.product_variants li img {
-  height: 100%;
-}
-.titre {
-  font-size: 2.2rem;
-  color: #36554b;
-}
-.sous_titre {
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #2c2c2c;
-}
-.description {
-  font-size: 0.8rem;
-  margin-top: 20px;
-}
-/* ---------------------- HISTORIQUE  */
-#Historique .overlay {
-  padding: 40px 25% 40px 25%;
-  gap: 30px;
-}
-
-#Historique .overlay article {
-  color: white;
-  font-size: 1rem;
-  font-weight: lighter;
-  line-height: 1.8rem;
-  padding: 0 30px;
-}
-#Historique .overlay cite {
-  color: white;
-  align-self: start;
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin-top: -20px;
-  font-style: normal;
-  margin-left: 30px;
-}
-#Historique .overlay hr {
-  width: 100%;
-  border: none;
-  height: 2px;
-  align-self: start;
-  background-color: white;
-}
-
-/* ---------------------- SLOGON  */
-#Slogon .overlay {
-  text-align: center;
-  padding: 40px 20% 40px 20%;
-  gap: 30px;
-}
-#Slogon .overlay h5 {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: lighter;
-  line-height: 1.8rem;
-  font-style: italic;
-  padding: 0 30px;
-}
-
-/* ---------------------- CONTACT  */
-#Contact,
-#Contact a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-}
-
-#Contact .overlay {
+  background-attachment: fixed;
+  background-image: url("./img/STABILA_cover.jpeg");
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "footer_logo iframe iframe"
-    "footer_logo Contact_info menu"
-    "social_media social_media social_media"
-    "Copyrights Copyrights Copyrights";
-  gap: 50px;
-  padding: 100px 10% 50px 10%;
 }
-#Contact .overlay .footer_logo {
-  grid-area: footer_logo;
+#Details.section .overlay {
+  background-color: var(--Color-Dark-Overlay);
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
-#Contact .overlay .footer_logo img {
-  width: 150px;
-}
-#Contact .overlay .footer_logo h6 {
-  margin-top: 10px;
-  font-size: 1.2em;
-}
-#Contact .overlay .footer_logo p {
-  margin-top: 20px;
-}
-#Contact .overlay .menu {
-  grid-area: menu;
-}
-#Contact .overlay .Contact_info {
-  grid-area: Contact_info;
-}
-#Contact .overlay .Contact_info li {
-  list-style-type: none;
-}
-#Contact .overlay .social_media {
-  grid-area: social_media;
-}
-#Contact .overlay .social_media ul {
-  margin-top: 20px;
-  display: flex;
-  place-content: center;
-  column-gap: 20px;
-}
-#Contact .overlay .social_media img {
-  max-width: 40px;
-}
-#Contact .overlay .social_media hr {
-  border: none;
-  background-color: white;
-  height: 2px;
-}
-#Contact .overlay .social_media ul li {
-  list-style-type: none;
-}
-#Contact .overlay .Copyrights {
-  grid-area: Copyrights;
-  text-align: center;
-  margin-top: -40px;
-}
-#Contact .overlay iframe {
-  grid-area: iframe;
-  border-radius: 7px;
-}
-/* -------------- */
-#side_menu {
-  display: none;
-}
-.img_menu {
-  display: none;
-}
-/* ------------------- */
-/* ---------------------- RESPONSIVE  */
-@media screen and (max-width: 800px) {
-  /* ---------------------- MARQUE */
-  #Marque {
-    height: 80vh;
-  }
-
-  /* ---------------------- PRODUCT DETAILS */
-  .details_grid {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "banner"
-      "description_container"
-      "product_variants"
-      "voirplus_btn";
-    column-gap: 40px;
-    width: 100%;
-    padding: 10%;
-  }
-  .banner {
-    height: 100px;
-    width: 100%;
-  }
-  .banner_overlay img {
-    margin-bottom: -100px;
-  }
-  .description_container {
-    padding-right: 0;
-    margin-top: 50px;
-  }
-  .voirplus_btn {
-    width: 100%;
-  }
-  .product_variants li {
-    height: 60px;
-  }
-  /* ---------------------- SLOGON  */
-  #Slogon .overlay {
-    padding: 40px 0 40px 0;
-  }
-  /* ---------------------- HISTORIQUE  */
-  #Historique .overlay {
-    padding: 40px 0 40px 0;
-    gap: 30px;
-  }
-  #Historique .overlay hr {
-    width: 80%;
-    border: none;
-    height: 2px;
-    align-self: start;
-    margin-left: 30px;
-  }
-  /* ---------------------- CONTACT  */
-
-  #Contact .overlay {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "footer_logo"
-      "iframe"
-      "Contact_info"
-      "menu"
-      "social_media"
-      "Copyrights";
-    gap: 30px;
-  }
-  #Contact .overlay iframe {
-    margin-top: 0px;
-  }
-  #Contact .overlay .Contact_info {
-    margin-top: 30px;
-  }
-  #Contact .overlay .Copyrights {
-    margin-top: -20px;
-  }
-  /* ---------------------- HEADER  */
-  header {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: -100%;
-    width: 100%;
-    font-size: 14px;
-    z-index: 6;
-    transition: 800ms ease-in-out;
-  }
-  header .overlay {
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: white;
-    padding: 5% 0px 5% 0px;
-    gap: 20px;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.247);
-  }
-  .logo {
-    height: 70px;
-    margin-left: 30px;
-  }
-  .logo img {
-    height: 100%;
-  }
-
-  header nav {
-    /* background-color: #2c2c2c; */
-    height: auto;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  header nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    /* background-color: #36554b; */
-  }
-
-  header nav ul li {
-    display: flex;
-    justify-content: flex-start;
-    list-style-type: none;
-    padding: 20px 0px 20px 30px;
-    /* background-color: tomato; */
-    width: 100%;
-  }
-  header nav ul li:hover {
-    background-color: #36554b;
-  }
-  header nav ul li:hover a {
-    color: white;
-  }
-  header nav ul li a {
-    text-decoration: none;
-    color: teal;
-  }
-
-  header button {
-    margin-top: 20px;
-    margin-left: 30px;
-    width: 130px;
-    height: 40px;
-    border: 2px solid teal;
-    border-radius: 7px;
-    background-color: transparent;
-  }
-  header button a {
-    text-decoration: none;
-    color: teal;
-  }
-  header button:hover {
-    background-color: teal;
-  }
-
-  header button:hover a {
-    color: white;
-  }
-  .mobile_topbar {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 15px 10% 15px 15%;
-  }
-  .mobile_topbar .logo {
-    height: 40px;
-    margin-left: 0px;
-  }
-  .mobile_topbar button {
-    width: 130px;
-    height: 40px;
-    border: 2px solid teal;
-    border-radius: 7px;
-    background-color: transparent;
-  }
-  .mobile_topbar button a {
-    text-decoration: none;
-    color: teal;
-  }
-  .mobile_topbar button:hover {
-    background-color: teal;
-  }
-
-  .mobile_topbar button:hover a {
-    color: white;
-  }
-
-  #side_menu:checked ~ header {
-    left: 0%;
-    transition: 800ms ease-in-out;
-  }
-  #side_menu {
-    position: fixed;
-    left: 5%;
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    z-index: 10;
-    opacity: 0;
-    display: block;
-  }
-  .img_menu {
-    position: fixed;
-    left: 5%;
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    z-index: 9;
-    display: block;
-  }
-  .blanc_q {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-}
-/* ---------------------- additionnal section*/
-.blanc_q {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  padding: 20px;
+.produit_details {
+  grid-template-columns: auto auto;
+  background-color: var(--Color-Container);
+  padding: 50px;
   gap: 20px;
   align-items: center;
   justify-content: center;
-  min-height: 50vh; 
+  margin: 7%;
+  border-radius: 7px;
 }
-.d_v {
+
+.produit_details .banner {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 7px;
+}
+
+#METABO_details.produit_details .banner {
+  background-image: url("./img/METABO_cover.jpg");
+}
+#STIHL_details.produit_details .banner {
+  background-image: url("./img/STIHL_cover.jpeg");
+}
+#STABILA_details.produit_details .banner {
+  background-image: url("./img/STABILA_cover.jpeg");
+}
+#HADEF_details.produit_details .banner {
+  background-image: url("./img/HADEF_cover.jpeg");
+}
+
+.produit_details .banner .banner_overlay {
+  background-color: var(--Color-Light-Overlay);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+.produit_details .banner .banner_overlay img {
+  border-radius: 7px;
+  width: 200px;
+}
+.produit_details .content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 10px;
+}
+.produit_details .content article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.produit_details .content .titre {
+  font-size: var(--Font-size-Text-Title);
+  color: var(--Color-Text-Title);
+}
+.produit_details .content .sous_titre {
+  font-size: var(--Font-size-Text-Sub_Title);
+  color: var(--Color-Text-Sub_Title);
+}
+.produit_details .content .description {
+  font-size: var(--Font-size-Text-Text);
+  color: var(--Color-Text-Text);
+}
+.produit_details .boutique {
+  display: grid;
+  place-content: center;
+  width: 160px;
+}
+.produit_details .variantes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.produit_details .variantes li {
+  height: 80px;
+}
+.produit_details .variantes li img {
+  height: 100%;
+}
+
+/* ---------------------- Atout */
+#Atout.section {
+  background-color: var(--Color-Background);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+  border-bottom: solid 5px #a54848;
+}
+#Atout .atout_container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  align-items: center;
+  justify-content: stretch;
+  gap: 20px;
+  height: 270px;
+  width: 300px;
+}
+#Atout h3 {
+  font-size: 1.5rem;
+  color: var(--Color-Text-Sub_Title);
+}
+#Atout hr {
+  border: none;
+  background-color: var(--Color-Text-Text);
+  height: 2px;
+  width: 80%;
+  justify-self: center;
+}
+#Atout p {
+  font-size: var(--Font-size-Text-Text);
+  color: var(--Color-Text-Text);
+}
+.fa-people-carry {
+  font-size: 70px;
+  color: var(--Color-Primary);
+}
+.fa-ruler-horizontal {
+  font-size: 70px;
+  color: var(--Color-Primary);
+}
+
+.fa-award {
+  font-size: 70px;
+  color: var(--Color-Primary);
+}
+
+#Atout h5 {
+  font-size: var(--Font-size-Text-Text);
+  line-height: 1.5rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--Color-Text-Sub_Title);
+  padding: 0 10%;
+}
+#Atout h5 b {
+  color: #a54848;
+}
+
+#Atout .atout_container:hover .fa-people-carry {
+  font-size: 70px;
+  color: #a54848;
+}
+#Atout .atout_container:hover .fa-ruler-horizontal {
+  font-size: 70px;
+  color: #a54848;
+}
+#Atout .atout_container:hover .fa-award {
+  font-size: 70px;
+  color: #a54848;
+}
+/* ---------------------- blanc */
+#blanc.section {
+  background-image: url("./img/STABILA_cover.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: grid;
+}
+#blanc.section .overlay {
+  background-color: var(--Color-Dark-Overlay);
+  height: 100%;
+}
+/* ---------------------- Historique */
+#Historique.section {
+  background-color: var(--Color-Highight);
+  background-image: url("./img/Histoire.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  border-top: solid 3px white;
+}
+#Historique.section .overlay {
+  background-color: var(--Color-Dark-Overlay);
+  display: grid;
+  place-content: center;
+  padding: 13%;
+}
+#Historique.section .overlay p {
+  color: var(--Color-Highight);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.7rem;
+}
+/* --------------------------Contact */
+#Contact {
+  background-color: var(--Color-dark);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 30% auto auto;
+  grid-template-areas:
+    "f_s1 f_s2 f_s2"
+    "f_s1 f_s3 f_s4"
+    "f_s5 f_s5 f_s5";
+  gap: 20px;
+  color: var(--Color-Highight);
+  padding: 60px 5% 10px 5%;
+  line-height: 1.5rem;
+}
+
+.f_s1 {
+  grid-area: f_s1;
+}
+.f_s2 {
+  grid-area: f_s2;
   padding: 10px;
-  font-size: 1rem;
+}
+.f_s3 {
+  grid-area: f_s3;
+  padding: 10px;
+}
+.f_s4 {
+  grid-area: f_s4;
+  padding: 10px;
+}
+.f_s5 {
+  grid-area: f_s5;
+  padding: 10px;
+  display: grid;
+}
+
+#Contact img {
+  width: 160px;
+}
+
+.f_titre {
+  font-size: var(--Font-size-Text-Sub_Title);
+  margin-top: 15px;
+}
+
+.f_apropos {
+  font-size: var(--Font-size-Text-Text);
+  margin-top: 10px;
+}
+
+.contact_info {
+  font-size: var(--Font-size-Text-Text);
+  letter-spacing: 1px;
+}
+
+.f_menu {
+  font-size: var(--Font-size-Text-Text);
+}
+.f_menu li {
+  list-style-type: disc;
+}
+
+.f_menu a {
+  text-decoration: none;
+  font-weight: var(--Font-weight-Bold);
+  color: var(--Color-Highight);
+}
+.f_menu a:hover {
+  color: var(--Color-Primary);
+}
+
+.map {
+  border-radius: 5px;
+}
+
+#Contact hr {
+  border: none;
+  background-color: var(--Color-Highight);
+  height: 2px;
+}
+.social_media {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social_media a {
+  color: var(--Color-Highight);
+}
+
+.social_media a:hover {
+  color: var(--Color-Primary);
+}
+.copyrights {
+  text-align: center;
+  padding: 20px;
+}
+@media screen and (max-width: 800px) {
+  /* ---------------- Detail */
+  #Details.section {
+    min-height: 40vh;
+    background-color: var(--Color-Highight);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("./img/STABILA_cover.jpeg");
+    display: grid;
+  }
+  #Details.section .overlay {
+    background-color: var(--Color-Dark-Overlay);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .produit_details {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin: 70px 20px;
+    padding: 20px;
+  }
+
+  .produit_details .banner {
+    height: 150px;
+  }
+
+  .produit_details .banner .banner_overlay {
+    padding: 0px;
+  }
+
+  .produit_details .banner .banner_overlay img {
+    width: 200px;
+    margin-bottom: -260px;
+  }
+
+  .produit_details .content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 10px;
+  }
+  .produit_details .content article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .produit_details .content .titre {
+    font-size: var(--Font-size-Text-Title);
+    color: var(--Color-Text-Title);
+  }
+  .produit_details .content .sous_titre {
+    font-size: var(--Font-size-Text-Sub_Title);
+    color: var(--Color-Text-Sub_Title);
+  }
+  .produit_details .content .description {
+    font-size: var(--Font-size-Text-Text);
+    color: var(--Color-Text-Text);
+  }
+  .produit_details .boutique {
+    display: grid;
+    place-content: center;
+    width: 160px;
+  }
+  .produit_details .variantes {
+    gap: 30px;
+  }
+  .produit_details .variantes li {
+    height: 50px;
+  }
+  .produit_details .variantes li img {
+    height: 100%;
+  }
+
+  /* ---------------- contact */
+  #Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  /* ---------------- historique */
+
+  #Historique.section .overlay {
+    padding: 20px;
+  }
+  #Historique.section .overlay p {
+    font-size: var(--Font-size-Text-Text);
+    line-height: 1.2rem;
+  }
 }
