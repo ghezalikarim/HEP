@@ -28,14 +28,14 @@
 
   --Font: "Raleway", sans-serif;
   --Font-size-Text-Title: 2.5rem;
-  --Font-size-Text-Sub_Title: 1.2rem;
+  --Font-size-Text-Sub_Title: 1.1rem;
   --Font-size-Text-Text: 0.9rem;
   --Font-weight-Light: 400;
   --Font-weight-Bold: 800;
 
   /* -------- Shadow -------- */
 
-  --Shadow: 0px 1px 5px #00000027;
+  --Shadow: 1px 2px 5px #00000027;
 
   /* -------- Button -------- */
 
@@ -68,6 +68,7 @@ header {
   right: 0px;
   padding: 15px 3%;
   z-index: 5;
+  box-shadow: var(--Shadow);
 }
 .logo {
   height: 40px;
@@ -75,6 +76,7 @@ header {
 header nav {
   display: grid;
   place-content: center;
+  margin: auto;
 }
 
 header nav ul {
@@ -90,6 +92,7 @@ header nav ul {
 header nav ul li a {
   text-decoration: none;
   color: var(--Color-Links);
+  font-size: var(--Font-size-Text-Text);
   font-weight: var(--Font-weight-Bold);
 }
 header nav ul li a:hover {
@@ -114,6 +117,16 @@ header nav ul li a:hover {
 
 header img {
   height: 100%;
+}
+
+.fa-bars {
+  margin-right: 15px;
+  font-size: 25px;
+  display: none;
+  z-index: 8;
+}
+#menu_bar {
+  display: none;
 }
 
 /* ---------------------- Accueil */
@@ -162,7 +175,7 @@ header img {
   width: 500%;
   margin: 0;
   left: 0;
-  /* animation: slider 30s infinite; */
+  animation: slider 20s infinite;
 }
 .slider figure .slide {
   width: 20%;
@@ -682,6 +695,10 @@ header img {
     flex-direction: column;
     align-items: stretch;
   }
+  .social_media {
+    font-size: 40px;
+  }
+
   /* ---------------- historique */
 
   #Historique.section .overlay {
@@ -695,5 +712,81 @@ header img {
   /* ---------------- atout */
   #Atout h5 {
     padding: 10px;
+  }
+
+  /* ---------------------- Header */
+
+  header nav {
+    position: fixed;
+    background-color: var(--Color-Highight);
+    top: 0px;
+    bottom: 0px;
+    left: -100%;
+    display: grid;
+    place-content: initial;
+    z-index: 6;
+    transition: 300ms;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    gap: 20px;
+    padding: 100px 100px 0px 15px;
+    box-shadow: var(--Shadow);
+  }
+  .nav_links {
+    display: grid;
+    place-content: center;
+    margin: 0 10px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: var(--Color-Links);
+    font-weight: var(--Font-weight-Bold);
+  }
+  header nav ul li a:hover {
+    text-decoration: none;
+    color: var(--Color-Links-hover);
+    text-decoration: underline 3px var(--Color-Links);
+  }
+
+  .boutique {
+    border: solid 3px var(--Color-Primary);
+    color: var(--Color-Primary);
+    padding: 10px 35px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: var(--Font-weight-Bold);
+    margin-left: auto;
+  }
+
+  .boutique:hover {
+    background-color: var(--Color-Primary);
+    color: var(--Color-Highight);
+  }
+
+  header img {
+    height: 100%;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  #menu_bar:checked ~ .logo {
+    margin-left: 35px;
+  }
+  #menu_bar:checked ~ label .fa-bars {
+    position: absolute;
+    transition-delay: 300ms;
+    top: 25px;
+  }
+
+  #menu_bar:checked ~ .sidemenu {
+    left: 0px;
+    transition: 300ms;
   }
 }
