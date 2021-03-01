@@ -7,10 +7,6 @@
 #252525
 */
 
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,800;1,700&display=swap"); */
-
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap");
-
 :root {
   /* -------- Colors ------- */
 
@@ -30,8 +26,7 @@
   /* -------- Fonts -------- */
 
   /* --Font: "Raleway", sans-serif; */
-  --Font: "Assistant", sans-serif;
-
+  --Font: sans-serif;
   --Font-size-Text-Title: 2.5rem;
   --Font-size-Text-Sub_Title: 1.1rem;
   --Font-size-Text-Text: 0.9rem;
