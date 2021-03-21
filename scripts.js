@@ -1,13 +1,13 @@
 /// SLIDER CONTROLER ///
 
-// var counter = 2;
-// setInterval(function () {
-//   document.getElementById("slide-" + counter).checked = true;
-//   counter++;
-//   if (counter > 4) {
-//     counter = 1;
-//   }
-// }, 4000);
+var counter = 2;
+setInterval(function () {
+  document.getElementById("slide-" + counter).checked = true;
+  counter++;
+  if (counter > 4) {
+    counter = 1;
+  }
+}, 4000);
 
 /// SLIDER CONTROLER ///
 
@@ -25,7 +25,9 @@ let nav_menu = function (scrollto) {
       document.getElementById("Accueil").scrollIntoView({ behavior: "smooth" });
       break;
     case "marque":
-      document.getElementById("Marque").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("Marque")
+        .scrollIntoView({ block: "center", behavior: "smooth" });
       break;
     case "historique":
       document
